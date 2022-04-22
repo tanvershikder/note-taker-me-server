@@ -2,14 +2,14 @@ const express = require("express");
 const app = express();
 const port = 4000;
 const cors = require("cors");
-//ssagar
-//BsRNksvawiGGMTD8
+//ssagar    //node-taker
+//BsRNksvawiGGMTD8 // cx6PsdNQeg56LFou
 app.use(cors());
 app.use(express.json());
 
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const uri =
-  "mongodb+srv://sagar:BsRNksvawiGGMTD8@cluster0.rpcyv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://node-taker:cx6PsdNQeg56LFou@cluster0.rpcyv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -19,7 +19,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     await client.connect();
-    const notesCollection = client.db("notesTaker").collection("notes");
+    const notesCollection = client.db("note-taker").collection("notes");
 
     // get api to read all notes
     //http://localhost:4000/notes
